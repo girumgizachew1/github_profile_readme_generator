@@ -18,8 +18,7 @@ function Form() {
   };
 
   return (
-    <div>
-      <h1>Github Profile Readme Generator</h1>
+    <div className='space-y-10 justify-center mx-auto ' >
       <div>
         <label htmlFor="title">Title:</label>
         <input
@@ -28,14 +27,11 @@ function Form() {
           value={title}
           onChange={handleTitleChange}
         />
-      </div>
-      <div>
-        <label htmlFor="subtitle">Subtitle:</label>
         <input
           type="text"
-          id="subtitle"
-          value={subtitle}
-          onChange={handleSubtitleChange}
+          id="title"
+          value={title}
+          onChange={handleTitleChange}
         />
       </div>
       <button onClick={generateReadme}>Generate README</button>
