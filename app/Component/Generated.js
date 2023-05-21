@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 
 function Generated() {
   const generatedReadme = useSelector(state => state.readme);
-
+  const iframeContent = generatedReadme
 
   return (
     <div className="w-full h-full">
@@ -58,7 +58,7 @@ function Generated() {
         </button>
 
         <button className="border-2 bg-zinc-50 border-zinc-800 px-6 py-2 flex justify-right space-x-2">
-          <GrView className="w-5 h-5" /> <h1>Preview</h1>
+          <GrView className="w-5 h-5" /> <h1>Edit Markdown</h1>
         </button>
       </div>
       <div className='space-y-4' >
@@ -68,8 +68,9 @@ function Generated() {
         </div>
         <div
           className="border bg-zinc-50 border-zinc-800 w-full h-96"
-          dangerouslySetInnerHTML={{ __html: generatedReadme }}
-        />
+        >
+          <iframe className='w-full h-screen' srcDoc={iframeContent}></iframe>
+        </div>
       </div>
     </div>
 
