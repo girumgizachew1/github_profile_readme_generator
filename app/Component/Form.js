@@ -26,7 +26,8 @@ function Form() {
         <p align="left">
         </p>
 `;
-        console.log(readmeContent);
+        localStorage.setItem('generatedReadme', readmeContent);
+   
         // Logic to do something with the generated README content
     };
 
