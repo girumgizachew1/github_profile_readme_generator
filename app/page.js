@@ -1,9 +1,11 @@
+"use client"; // This is a client component 
 import Image from 'next/image'
+import Form from './Component/Form'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-
+    <main className="h-screen w-full">
+      <Form />
     </main>
   )
 }
