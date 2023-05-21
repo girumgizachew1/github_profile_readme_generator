@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <div className='flex mx-10 mt-10 space-x-4'>
         <div className='basis-1/2 w-full border border-zinc-800' ><Form /></div>
-        <div className='basis-1/2 w-full border border-zinc-800'><Generated /></div>
+        <div className='basis-1/2 w-full '><Generated /></div>
 
 
       </div>
