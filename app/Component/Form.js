@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-
+import { setGeneratedReadme } from '../Redux/Readme';
+import { useDispatch } from 'react-redux';
 function Form() {
+    const dispatch = useDispatch();
     const [titleone, setTitleone] = useState('Hi 👋, I am');
     const [titletwo, setTitletwo] = useState('');
 
@@ -17,6 +19,7 @@ function Form() {
     const handleSubtitleChange = (event) => {
         setSubtitle(event.target.value);
     };
+
     const generateReadme = () => {
         const readmeContent = `
         <h1 align="center">${titleone} ${titletwo}</h1>
@@ -26,8 +29,7 @@ function Form() {
         <p align="left">
         </p>
 `;
-        localStorage.setItem('generatedReadme', readmeContent);
-   
+        dispatch(setGeneratedReadme(readmeContent));
         // Logic to do something with the generated README content
     };
 

@@ -3,15 +3,11 @@ import { GrView } from 'react-icons/gr';
 import { BiCopy } from 'react-icons/bi';
 import { AiOutlineDownload } from 'react-icons/ai';
 import { FaFileCode } from 'react-icons/fa';
+import { useSelector } from 'react-redux';
 
 function Generated() {
-  const [generatedReadme, setGeneratedReadme] = useState('');
+  const generatedReadme = useSelector(state => state.readme);
 
-  useEffect(() => {
-    // Retrieve generated code from local storage
-    const readme = localStorage.getItem('generatedReadme');
-    setGeneratedReadme(readme);
-  }, []);
 
   return (
     <div className="w-full h-full">
