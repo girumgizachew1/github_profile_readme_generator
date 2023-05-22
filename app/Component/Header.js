@@ -13,7 +13,7 @@ function Header() {
         </div>
       </div>
       <div className="flex justify-center mt-20 space-x-4">
-        <button href="https://github.com/your-github-link" target="_blank" rel="noopener noreferrer" className="px-6 py-2 flex justify-right bg-zinc-700 text-zinc-100 rounded-lg">
+        <button href="https://github.com/your-github-link" target="_blank" rel="noopener noreferrer" className="px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg">
           Star this repo
         </button>
         <button href="https://buymeacoffee.com/your-coffee-link" target="_blank" rel="noopener noreferrer" className="px-6 py-2 flex justify-right bg-zinc-700 text-zinc-100 rounded-lg">

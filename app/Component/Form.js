@@ -118,7 +118,7 @@ function Form() {
             handleHelpProjectNameChange={handleHelpProjectNameChange}
              />
             
-            <button className='px-6 py-2 flex justify-right bg-zinc-700 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
+            <button className='px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
         </div>
     );
 }
