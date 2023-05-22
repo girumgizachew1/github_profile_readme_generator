@@ -72,6 +72,64 @@ function Form() {
     const handleHelpProjectLinkChange = (event) => {
         setHelpProjectLink(event.target.value);
     };
+{/*Profile*/}
+//learn
+const [learnhead, setLearnHead] = useState('🌱 I’m currently learning');
+const [learn, setLearn] = useState('');
+const handleLearnHeadChange = (event) => {
+    setLearnHead(event.target.value);
+};
+
+const handleLearnChange = (event) => {
+    setLearn(event.target.value);
+};
+
+//ask
+const [askhead, setAskHead] = useState('Ask me about 💬 ');
+const [ask, setAsk] = useState('');
+const handleAskHeadChange = (event) => {
+    setAskHead(event.target.value);
+};
+
+const handleAskChange = (event) => {
+    setAsk(event.target.value);
+};
+
+//email
+const [emailhead, setEmailHead] = useState('How to reach me📫 ');
+const [email, setEmail] = useState('');
+const handleEmailHeadChange = (event) => {
+    setEmailHead(event.target.value);
+};
+
+const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+};
+
+//Portfolio
+const [portfoliohead, setPortfolioHead] = useState('How to reach me📫 ');
+const [portfolio, setPortfolio] = useState('');
+const handlePortfolioHeadChange = (event) => {
+    setPortfolioHead(event.target.value);
+};
+
+const handlePortfolioChange = (event) => {
+    setPortfolio(event.target.value);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     {/*this is where i generated the readme*/}
