@@ -8,6 +8,23 @@ function Form() {
 
     const [subtitle, setSubtitle] = useState('A passionate frontend developer from Ethiopia');
 
+
+    const [currently, setCurrently] = useState('🔭 I’m currently working on');
+    const [currentlyProjectName, setCurrentlyProjectName] = useState('');
+    const [currentlyProjectLink, setCurrentlyProjectLink] = useState('');
+
+    const [collaborate, setCollaborate] = useState('👯 I’m looking to collaborate on');
+    const [collaborateProjectName, setCollaborateProjectName] = useState('');
+    const [collaborateProjectLink, setCollaborateProjectLink] = useState('');
+
+
+    const [help, setHelp] = useState('🤝 I’m looking for help with');
+    const [helpProjectName, setHelpProjectName] = useState('');
+    const [helpProjectLink, setHelpProjectLink] = useState('');
+
+
+
+
     const handleTitleChange = (event) => {
         setTitleone(event.target.value);
     };
@@ -20,11 +37,55 @@ function Form() {
         setSubtitle(event.target.value);
     };
 
+    const handleCurrentlyChange = (event) => {
+        setCurrently(event.target.value);
+    };
+
+    const handleCurrentlyProjectNameChange = (event) => {
+        setCurrentlyProjectName(event.target.value);
+    };
+
+    const handleCurrentlyProjectLinkChange = (event) => {
+        setCurrentlyProjectLink(event.target.value);
+    };
+
+
+
+    const handleCollaborateChange = (event) => {
+        setCollaborate(event.target.value);
+    };
+
+    const handleCollaborateProjectNameChange = (event) => {
+        setCollaborateProjectName(event.target.value);
+    };
+
+    const handleCollaborateProjectLinkChange = (event) => {
+        setCollaborateProjectLink(event.target.value);
+    };
+
+
+
+    const handleHelpChange = (event) => {
+        setHelp(event.target.value);
+    };
+
+    const handleHelpProjectNameChange = (event) => {
+        setHelpProjectName(event.target.value);
+    };
+
+    const handleHelpProjectLinkChange = (event) => {
+        setHelpProjectLink(event.target.value);
+    };
+
     const generateReadme = () => {
         const readmeContent = `
         <h1 align="center">${titleone} ${titletwo}</h1>
         <h3 align="center">${subtitle}</h3>
-
+        ${currently} <a href="${currentlyProjectLink}">${currentlyProjectName}</a>
+        <br/>
+        ${collaborate} <a href="${collaborateProjectLink}">${collaborateProjectName}</a>
+        <br/>
+        ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
         <h3 align="left">Connect with me:</h3>
         <p align="left">
         </p>
@@ -34,37 +95,242 @@ function Form() {
     };
 
     return (
-        <div className='space-y-10 justify-center p-2 w-full' >
+        <div className='space-y-6 justify-center p-2 w-full bg-zinc-100 text-zinc-600' >
             <div className='space-y-3' >
-                <h1 className='text-xl font-semibold' >Title</h1>
-                <div className='space-x-4' >
+                <h1 className='text-xl font-semibold ' >Title</h1>
+                <div className='space-x-4 text-sm text-zinc-600' >
                     <input
                         type="text"
                         id="title"
                         value={titleone}
                         onChange={handleTitleChange}
-                        className="border-b border-zinc-800 focus:border-zinc-800 outline-none"
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
                     />
+
                     <input
                         type="text"
                         id="title"
                         value={titletwo}
                         onChange={handleTitletwoChange}
-                        className="border-b border-zinc-800 focus:border-zinc-800 outline-none"
-                    />          </div>
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                </div>
             </div>
             <div className='space-y-3' >
-                <h1 className='text-xl font-semibold' >Sub Title</h1>
+                <h1 className='text-xl font-semibold ' >Sub Title</h1>
                 <input
                     type="text"
                     id="subtitle"
                     value={subtitle}
                     onChange={handleSubtitleChange}
-                    className="border-b border-zinc-800 focus:border-zinc-800 outline-none w-auto"
-                />
+                    className="w-full text-sm text-zinc-600  border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
 
             </div>
-            <button className='border border-zinc-800 px-6 py-2 flex justify-right' onClick={generateReadme}>Generate Read me</button>
+
+            <div className='space-y-3' >
+                <h1 className='text-xl font-semibold' >Work</h1>
+                <div className='space-x-4 text-sm text-zinc-600' >
+                    <input
+                        type="text"
+                        id="title"
+                        value={currently}
+                        onChange={handleCurrentlyChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                    <input
+                        type="text"
+                        id="title"
+                        value={currentlyProjectName}
+                        onChange={handleCurrentlyProjectNameChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                    <input
+                        type="text"
+                        id="title"
+                        value={currentlyProjectLink}
+                        onChange={handleCurrentlyProjectLinkChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                </div>
+
+
+
+                <div className='space-x-4 text-sm text-zinc-600' >
+                    <input
+                        type="text"
+                        id="title"
+                        value={collaborate}
+                        onChange={handleCollaborateChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                    <input
+                        type="text"
+                        id="title"
+                        value={collaborateProjectName}
+                        onChange={handleCollaborateProjectNameChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                    <input
+                        type="text"
+                        id="title"
+                        value={collaborateProjectLink}
+                        onChange={handleCollaborateProjectLinkChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                </div>
+
+
+                <div className='space-x-4 text-sm text-zinc-600' >
+                    <input
+                        type="text"
+                        id="title"
+                        value={help}
+                        onChange={handleHelpChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                    <input
+                        type="text"
+                        id="title"
+                        value={helpProjectName}
+                        onChange={handleHelpProjectNameChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                    <input
+                        type="text"
+                        id="title"
+                        value={helpProjectLink}
+                        onChange={handleHelpProjectLinkChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                </div>
+
+
+
+                <div className='space-x-4 text-sm text-zinc-600' >
+                    <input
+                        type="text"
+                        id="title"
+                        value={titleone}
+                        onChange={handleTitleChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+
+                    <input
+                        type="text"
+                        id="title"
+                        value={titletwo}
+                        onChange={handleTitletwoChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                </div>
+                <div className='space-x-4 text-sm text-zinc-600' >
+                    <input
+                        type="text"
+                        id="title"
+                        value={titleone}
+                        onChange={handleTitleChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+
+                    <input
+                        type="text"
+                        id="title"
+                        value={titletwo}
+                        onChange={handleTitletwoChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                </div>
+                <div className='space-x-4 text-sm text-zinc-600' >
+                    <input
+                        type="text"
+                        id="title"
+                        value={titleone}
+                        onChange={handleTitleChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+
+                    <input
+                        type="text"
+                        id="title"
+                        value={titletwo}
+                        onChange={handleTitletwoChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                </div>
+                <div className='space-x-4 text-sm text-zinc-600' >
+                    <input
+                        type="text"
+                        id="title"
+                        value={titleone}
+                        onChange={handleTitleChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+
+                    <input
+                        type="text"
+                        id="title"
+                        value={titletwo}
+                        onChange={handleTitletwoChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                </div>
+                <div className='space-x-4 text-sm text-zinc-600' >
+                    <input
+                        type="text"
+                        id="title"
+                        value={titleone}
+                        onChange={handleTitleChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+
+                    <input
+                        type="text"
+                        id="title"
+                        value={titletwo}
+                        onChange={handleTitletwoChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                </div>
+                <div className='space-x-4 text-sm text-zinc-600' >
+                    <input
+                        type="text"
+                        id="title"
+                        value={titleone}
+                        onChange={handleTitleChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+
+                    <input
+                        type="text"
+                        id="title"
+                        value={titletwo}
+                        onChange={handleTitletwoChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                </div>
+                <div className='space-x-4 text-sm text-zinc-600' >
+                    <input
+                        type="text"
+                        id="title"
+                        value={titleone}
+                        onChange={handleTitleChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+
+                    <input
+                        type="text"
+                        id="title"
+                        value={titletwo}
+                        onChange={handleTitletwoChange}
+                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
+                    />
+                </div>
+
+
+            </div>
+
+            <button className='px-6 py-2 flex justify-right bg-zinc-700 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
         </div>
     );
 }

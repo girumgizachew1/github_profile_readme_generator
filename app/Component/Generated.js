@@ -14,7 +14,7 @@ function Generated() {
       <div className="flex space-x-2 mb-4 justify-between text-sm">
 
         <button
-          className="border-2 bg-zinc-50 border-zinc-800 px-6 py-2 flex justify-right space-x-2"
+          className="px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg flex space-x-2"
           onClick={() => {
             navigator.clipboard.writeText(generatedReadme);
             // Add any additional logic or UI feedback as needed
@@ -24,7 +24,7 @@ function Generated() {
         </button>
 
         <button
-          className="border-2 bg-zinc-50 border-zinc-800 px-6 py-2 flex justify-right space-x-2"
+          className="px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg flex space-x-2"
           onClick={() => {
             const element = document.createElement('a');
             const file = new Blob([generatedReadme], { type: 'text/plain' });
@@ -39,7 +39,7 @@ function Generated() {
         </button>
 
         <button
-          className="border-2 bg-zinc-50 border-zinc-800 px-6 py-2 flex justify-right space-x-2"
+          className="px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg flex space-x-2"
           onClick={() => {
             const backupData = {
               generatedReadme: generatedReadme,
@@ -57,19 +57,19 @@ function Generated() {
           <FaFileCode className="w-5 h-5" /> <h1>Download Backup</h1>
         </button>
 
-        <button className="border-2 bg-zinc-50 border-zinc-800 px-6 py-2 flex justify-right space-x-2">
+        <button className="px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg flex space-x-2">
           <GrView className="w-5 h-5" /> <h1>Edit Markdown</h1>
         </button>
       </div>
       <div className='space-y-4' >
-        <div className="border bg-zinc-50 border-zinc-800 w-full h-full space-y-4">
+        <div className="bg-zinc-100 text-zinc-600 w-full h-full py-4">
           <pre>{generatedReadme}</pre>
 
         </div>
         <div
-          className="border bg-zinc-50 border-zinc-800 w-full h-96"
+          className="bg-zinc-100 text-zinc-600 w-full h-full py-4"
         >
-          <iframe className='w-full h-screen' srcDoc={iframeContent}></iframe>
+          <iframe className='w-full h-96 text-zinc-600' srcDoc={iframeContent}></iframe>
         </div>
       </div>
     </div>

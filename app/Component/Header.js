@@ -4,7 +4,7 @@ import Image from 'next/image';
 function Header() {
   return (
     <header className="w-full h-40 flex flex-col ">
-      <div className='bg-zinc-800 flex w-full h-14 justify-between fixed ' >
+      <div className='bg-zinc-700 flex w-full h-14 justify-between fixed ' >
         <div className='flex space-x-4' >
           <div className="h-16 mt-2">
             <Image src="/logo2.png" alt="Logo" width={100} height={100} className='ml-10 w-10 h-10' />
@@ -13,12 +13,12 @@ function Header() {
         </div>
       </div>
       <div className="flex justify-center mt-20 space-x-4">
-        <a href="https://github.com/your-github-link" target="_blank" rel="noopener noreferrer" className="text-zinc-800 border-2 border-zinc-700 px-6 py-2">
+        <button href="https://github.com/your-github-link" target="_blank" rel="noopener noreferrer" className="px-6 py-2 flex justify-right bg-zinc-700 text-zinc-100 rounded-lg">
           Star this repo
-        </a>
-        <a href="https://buymeacoffee.com/your-coffee-link" target="_blank" rel="noopener noreferrer" className="text-zinc-800 border-2 border-zinc-700 px-6 py-2">
+        </button>
+        <button href="https://buymeacoffee.com/your-coffee-link" target="_blank" rel="noopener noreferrer" className="px-6 py-2 flex justify-right bg-zinc-700 text-zinc-100 rounded-lg">
           Fork on Github
-        </a>
+        </button>
       </div>
     </header>
   );

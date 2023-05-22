@@ -10,8 +10,8 @@ export default function Home() {
     <Provider store={store}>
     <main className="h-screen w-full">
       <Header />
-      <div className='flex mx-10 mt-10 space-x-4'>
-        <div className='basis-1/2 w-full border border-zinc-800' ><Form /></div>
+      <div className='flex mx-10 mt-10 space-x-4 '>
+        <div className='basis-1/2 w-full shadow-sm shadow-zinc-300 rounded-sm' ><Form /></div>
         <div className='basis-1/2 w-full '><Generated /></div>
 
 
