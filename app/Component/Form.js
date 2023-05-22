@@ -175,6 +175,8 @@ const handleFunfactChange = (event) => {
         <h3 align="center">${subtitle}</h3>
         ${currently} <a href="${currentlyProjectLink}">${currentlyProjectName}</a>
         <br/>
+        -${learnhead} **${learn}**
+        <br/>
         ${collaborate} <a href="${collaborateProjectLink}">${collaborateProjectName}</a>
         <br/>
         ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
