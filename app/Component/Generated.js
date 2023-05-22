@@ -9,7 +9,7 @@ function Generated() {
   const generatedReadme = useSelector(state => state.readme);
   const iframeContent = generatedReadme
 
-  
+
 
   return (
     <div className="w-full h-full">
@@ -63,17 +63,17 @@ function Generated() {
           <GrView className="w-5 h-5" /> <h1>Edit Markdown</h1>
         </button>
       </div>
-      <div className='space-y-4' >
+      <div className="space-y-4">
         <div className="bg-zinc-100 text-zinc-600 py-4">
-          <pre>{generatedReadme}</pre>
-
+          <pre className="max-w-2xl mx-auto whitespace-pre-wrap">{generatedReadme}</pre>
         </div>
-        <div
-          className="bg-zinc-100 text-zinc-600 h-screen  py-4"
-        >
-          <iframe className='w-full h-full text-zinc-600' srcDoc={iframeContent}></iframe>
+
+
+        <div className="bg-zinc-100 text-zinc-600 h-screen py-4">
+          <iframe className="w-full h-full text-zinc-600" srcDoc={iframeContent} />
         </div>
       </div>
+
     </div>
 
   );

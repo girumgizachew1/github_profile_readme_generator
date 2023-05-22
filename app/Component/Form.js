@@ -199,7 +199,7 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
     };
 
     return (
-        <div className='space-y-6 justify-center p-2 w-full bg-zinc-100 text-zinc-600' >
+        <div className='space-y-6 justify-center p-2 bg-zinc-100 text-zinc-600' >
             <TitleSection titleone={titleone} titletwo={titletwo} handleTitleChange={handleTitleChange} handleTitleTwoChange={handleTitleTwoChange} />          
             <SubtitleSection subtitle={subtitle} handleSubtitleChange={handleSubtitleChange} />
             <WorkSection 
