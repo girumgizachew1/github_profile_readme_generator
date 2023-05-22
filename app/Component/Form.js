@@ -107,7 +107,7 @@ const handleEmailChange = (event) => {
 };
 
 //Portfolio
-const [portfoliohead, setPortfolioHead] = useState('How to reach me📫 ');
+const [portfoliohead, setPortfolioHead] = useState('👨‍💻 All of my projects are available at');
 const [portfolio, setPortfolio] = useState('');
 const handlePortfolioHeadChange = (event) => {
     setPortfolioHead(event.target.value);
@@ -117,7 +117,40 @@ const handlePortfolioChange = (event) => {
     setPortfolio(event.target.value);
 };
 
+//Blog
+const [bloghead, setBlogHead] = useState('📝 I regularly write articles on');
+const [Blog, setBlog] = useState('');
+const handleBlogHeadChange = (event) => {
+    setBlogHead(event.target.value);
+};
 
+const handleBlogChange = (event) => {
+    setBlog(event.target.value);
+};
+
+
+//Resume
+const [resumehead, setResumeHead] = useState('Know about my experiences 📄 ');
+const [resume, setResume] = useState('');
+const handleResumeHeadChange = (event) => {
+    setResumeHead(event.target.value);
+};
+
+const handleResumeChange = (event) => {
+    setResume(event.target.value);
+};
+
+
+//Fun fact
+const [funfacthead, setFunfactHead] = useState('⚡ Fun fact');
+const [funfact, setFunfact] = useState('');
+const handleFunfactHeadChange = (event) => {
+    setFunfactHead(event.target.value);
+};
+
+const handleFunfactChange = (event) => {
+    setFunfact(event.target.value);
+};
 
 
 
