@@ -127,30 +127,46 @@ function LanguagesSection() {
     setSelectedLanguage(language);
   };
 
+  const [selectedCategory, setSelectedCategory] = useState(languageCategories[0].category);
+
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+  };
+
   return (
-    <div className='space-y-8'>
-      <h1 className='text-xl font-semibold'>Skills</h1>
-      {languageCategories.map((category) => (
-        <div key={category.category}>
-          <h3 className='text-lg '>{category.category}</h3>
-          <ul className='grid grid-cols-6 gap-4'>
-            {category.languages.map((language) => (
-              <li key={language.name}>
-                <label>
-                  <input
-                    type="radio"
-                    name="language"
-                    value={language.name}
-                    checked={selectedLanguage.includes(language.name)}
-                    onChange={() => handleLanguageSelect(language.name)}
-                  />
-                  <img src={language.icon} alt={language.name} width="80" height="80" />
-                </label>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+    <div className="space-y-8">
+    <div className='flex justify-between' >
+      <h1 className="text-xl font-semibold">Skills</h1>
+      <select
+        value={selectedCategory}
+        onChange={(e) => handleCategorySelect(e.target.value)}
+        className="border rounded-md py-2 px-4"
+      >
+        {languageCategories.map((category) => (
+          <option key={category.category} value={category.category}>
+            {category.category}
+          </option>
+        ))}
+      </select>
+      </div>
+      <div>
+        <ul className="grid grid-cols-6 gap-4">
+          {languageCategories.find((category) => category.category === selectedCategory).languages.map((language) => (
+            <li key={language.name}>
+              <label>
+                <input
+                  type="checkbox"
+                  name="language"
+                  value={language.name}
+                  checked={selectedLanguage.includes(language.name)}
+                  onChange={() => handleLanguageSelect(language.name)}
+                />
+                <img src={language.icon} alt={language.name} width="80" height="80" />
+              </label>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
   
