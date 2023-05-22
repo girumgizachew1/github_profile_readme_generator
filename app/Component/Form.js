@@ -5,6 +5,7 @@ import TitleSection from './FormComponent/TitleSection';
 import SubtitleSection from './FormComponent/SubtitleSection';
 import WorkSection from './FormComponent/WorkSection';
 import ProfileSection from './FormComponent/ProfileSection';
+import LanguagesSection from './FormComponent/LanguagesSection';
 function Form() {
     const dispatch = useDispatch();
 
@@ -260,6 +261,7 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
 
 
             />
+            <LanguagesSection/>
             <button className='px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
         </div>
     );
