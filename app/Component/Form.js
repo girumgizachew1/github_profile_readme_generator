@@ -6,6 +6,7 @@ import SubtitleSection from './FormComponent/SubtitleSection';
 import WorkSection from './FormComponent/WorkSection';
 import ProfileSection from './FormComponent/ProfileSection';
 import LanguagesSection from './FormComponent/LanguagesSection';
+import SocialSection from './FormComponent/SocialSection';
 function Form() {
     const dispatch = useDispatch();
 
@@ -157,9 +158,21 @@ const handleFunfactChange = (event) => {
 };
 
 
+{/* Social */}
 
 
+//github
+const [github, setGithub] = useState('');
+const handleGithubChange = (event) => {
+    setGithub(event.target.value);
+};
 
+
+//twiter
+const [twiter, setTwiter] = useState('');
+const handleTwiterChange = (event) => {
+    setTwiter(event.target.value);
+};
 
 
 
@@ -261,7 +274,7 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
 
 
             />
-            <LanguagesSection/>
+            <SocialSection/>
             <button className='px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
         </div>
     );

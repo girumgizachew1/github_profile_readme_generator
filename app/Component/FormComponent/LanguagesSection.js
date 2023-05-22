@@ -150,7 +150,7 @@ function LanguagesSection() {
       </select>
       </div>
       <div>
-        <ul className="grid grid-cols-6 gap-4">
+        <ul className="grid grid-cols-8 gap-4">
           {languageCategories.find((category) => category.category === selectedCategory).languages.map((language) => (
             <li key={language.name}>
               <label>
@@ -161,7 +161,7 @@ function LanguagesSection() {
                   checked={selectedLanguage.includes(language.name)}
                   onChange={() => handleLanguageSelect(language.name)}
                 />
-                <img src={language.icon} alt={language.name} width="80" height="80" />
+                <img src={language.icon} alt={language.name} width="60" height="60" />
               </label>
             </li>
           ))}
