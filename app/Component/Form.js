@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import TitleSection from './FormComponent/TitleSection';
 import SubtitleSection from './FormComponent/SubtitleSection';
 import WorkSection from './FormComponent/WorkSection';
+import ProfileSection from './FormComponent/ProfileSection';
 function Form() {
     const dispatch = useDispatch();
 
@@ -72,6 +73,8 @@ function Form() {
     const handleHelpProjectLinkChange = (event) => {
         setHelpProjectLink(event.target.value);
     };
+
+
 {/*Profile*/}
 //learn
 const [learnhead, setLearnHead] = useState('🌱 I’m currently learning');
@@ -119,7 +122,7 @@ const handlePortfolioChange = (event) => {
 
 //Blog
 const [bloghead, setBlogHead] = useState('📝 I regularly write articles on');
-const [Blog, setBlog] = useState('');
+const [blog, setBlog] = useState('');
 const handleBlogHeadChange = (event) => {
     setBlogHead(event.target.value);
 };
@@ -209,6 +212,41 @@ const handleFunfactChange = (event) => {
             handleHelpProjectNameChange={handleHelpProjectNameChange}
              />
             
+            <ProfileSection 
+            learnhead={learnhead}
+            learn={learn}
+            ask={ask}
+            askhead={askhead}
+            email={email}
+            emailhead={emailhead}
+            portfolio={portfolio}
+            portfoliohead={portfoliohead}
+            bloghead={bloghead}
+            blog={blog}
+            resume={resume}
+            resumehead={resumehead}
+            funfact={funfact}
+            funfacthead={funfacthead}
+            handleLearnChange={handleLearnChange}
+            handleLearnHeadChange={handleLearnHeadChange}
+            handleAskChange={handleAskChange}
+            handleAskHeadChange={handleAskHeadChange}
+            handleEmailChange={handleEmailChange}
+            handleEmailHeadChange={handleEmailHeadChange}
+            handlePorfolioChange={handlePortfolioChange}
+            handlePorfolioHeadChange={handlePortfolioHeadChange}
+            handleBlogChange={handleBlogChange}
+            handleBlogHeadChange={handleBlogHeadChange}
+            handleResumeChange={handleResumeChange}
+            handleResumeHeadChange={handleResumeHeadChange}
+            handleFanfactChange={handleFunfactChange}
+            handleFanfactHeadChange={handleFunfactHeadChange}
+
+
+
+
+
+            />
             <button className='px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
         </div>
     );
