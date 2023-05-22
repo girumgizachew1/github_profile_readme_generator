@@ -3,6 +3,7 @@ import { setGeneratedReadme } from '../Redux/Readme';
 import { useDispatch } from 'react-redux';
 import TitleSection from './FormComponent/TitleSection';
 import SubtitleSection from './FormComponent/SubtitleSection';
+import WorkSection from './FormComponent/WorkSection';
 function Form() {
     const dispatch = useDispatch();
 
@@ -24,22 +25,10 @@ function Form() {
 
 
 {/*work */}
+//currently
     const [currently, setCurrently] = useState('🔭 I’m currently working on');
     const [currentlyProjectName, setCurrentlyProjectName] = useState('');
     const [currentlyProjectLink, setCurrentlyProjectLink] = useState('');
-
-    const [collaborate, setCollaborate] = useState('👯 I’m looking to collaborate on');
-    const [collaborateProjectName, setCollaborateProjectName] = useState('');
-    const [collaborateProjectLink, setCollaborateProjectLink] = useState('');
-
-
-    const [help, setHelp] = useState('🤝 I’m looking for help with');
-    const [helpProjectName, setHelpProjectName] = useState('');
-    const [helpProjectLink, setHelpProjectLink] = useState('');
-
-
-
-
     const handleCurrentlyChange = (event) => {
         setCurrently(event.target.value);
     };
@@ -52,8 +41,10 @@ function Form() {
         setCurrentlyProjectLink(event.target.value);
     };
 
-
-
+//collaborate
+    const [collaborate, setCollaborate] = useState('👯 I’m looking to collaborate on');
+    const [collaborateProjectName, setCollaborateProjectName] = useState('');
+    const [collaborateProjectLink, setCollaborateProjectLink] = useState('');
     const handleCollaborateChange = (event) => {
         setCollaborate(event.target.value);
     };
@@ -66,8 +57,10 @@ function Form() {
         setCollaborateProjectLink(event.target.value);
     };
 
-
-
+//needhelp
+    const [help, setHelp] = useState('🤝 I’m looking for help with');
+    const [helpProjectName, setHelpProjectName] = useState('');
+    const [helpProjectLink, setHelpProjectLink] = useState('');
     const handleHelpChange = (event) => {
         setHelp(event.target.value);
     };
@@ -80,6 +73,8 @@ function Form() {
         setHelpProjectLink(event.target.value);
     };
 
+
+    {/*this is where i generated the readme*/}
     const generateReadme = () => {
         const readmeContent = `
         <h1 align="center">${titleone} ${titletwo}</h1>
@@ -98,88 +93,31 @@ function Form() {
 
     return (
         <div className='space-y-6 justify-center p-2 w-full bg-zinc-100 text-zinc-600' >
-            <TitleSection titleone={titleone} titletwo={titletwo} handleTitleChange={handleTitleChange} handleTitleTwoChange={handleTitleTwoChange} />
-          
+            <TitleSection titleone={titleone} titletwo={titletwo} handleTitleChange={handleTitleChange} handleTitleTwoChange={handleTitleTwoChange} />          
             <SubtitleSection subtitle={subtitle} handleSubtitleChange={handleSubtitleChange} />
-          
-
-            <div className='space-y-3' >
-                <h1 className='text-xl font-semibold' >Work</h1>
-                <div className='space-x-4 text-sm text-zinc-600' >
-                    <input
-                        type="text"
-                        id="title"
-                        value={currently}
-                        onChange={handleCurrentlyChange}
-                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
-                    />
-                    <input
-                        type="text"
-                        id="title"
-                        value={currentlyProjectName}
-                        onChange={handleCurrentlyProjectNameChange}
-                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
-                    />
-                    <input
-                        type="text"
-                        id="title"
-                        value={currentlyProjectLink}
-                        onChange={handleCurrentlyProjectLinkChange}
-                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
-                    />
-                </div>
-
-
-
-                <div className='space-x-4 text-sm text-zinc-600' >
-                    <input
-                        type="text"
-                        id="title"
-                        value={collaborate}
-                        onChange={handleCollaborateChange}
-                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
-                    />
-                    <input
-                        type="text"
-                        id="title"
-                        value={collaborateProjectName}
-                        onChange={handleCollaborateProjectNameChange}
-                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
-                    />
-                    <input
-                        type="text"
-                        id="title"
-                        value={collaborateProjectLink}
-                        onChange={handleCollaborateProjectLinkChange}
-                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
-                    />
-                </div>
-
-
-                <div className='space-x-4 text-sm text-zinc-600' >
-                    <input
-                        type="text"
-                        id="title"
-                        value={help}
-                        onChange={handleHelpChange}
-                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
-                    />
-                    <input
-                        type="text"
-                        id="title"
-                        value={helpProjectName}
-                        onChange={handleHelpProjectNameChange}
-                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
-                    />
-                    <input
-                        type="text"
-                        id="title"
-                        value={helpProjectLink}
-                        onChange={handleHelpProjectLinkChange}
-                        className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
-                    />
-                </div>
-            </div>
+            <WorkSection 
+            currently={currently}
+            currentlyProjectLink={collaborateProjectLink}
+            currentlyProjectName={collaborateProjectName}
+            handleCurrentlyChange={handleCurrentlyChange}
+            handleCurrentlyProjectLinkChange={handleCurrentlyProjectLinkChange}
+            handleCurrentlyProjectNameChange={handleCurrentlyProjectNameChange}
+            
+            collaborate={collaborate} 
+            handleCollaborateChange={handleCollaborateChange} 
+            collaborateProjectLink={collaborateProjectLink} 
+            handleCollaborateProjectLinkChange={handleCollaborateProjectLinkChange}
+            collaborateProjectName={collaborateProjectName}
+            handleCollaborateProjectNameChange={handleCollaborateProjectNameChange}
+            
+            help={help}
+            helpProjectLink={helpProjectLink}
+            helpProjectName={helpProjectName}
+            handleHelpChange={handleHelpChange}
+            handleHelpProjectLinkChange={handleHelpProjectLinkChange}
+            handleHelpProjectNameChange={handleHelpProjectNameChange}
+             />
+            
             <button className='px-6 py-2 flex justify-right bg-zinc-700 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
         </div>
     );
