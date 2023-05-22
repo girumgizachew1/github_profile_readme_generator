@@ -4,10 +4,12 @@ import { BiCopy } from 'react-icons/bi';
 import { AiOutlineDownload } from 'react-icons/ai';
 import { FaFileCode } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
-
+import 'github-markdown-css/github-markdown.css';
 function Generated() {
   const generatedReadme = useSelector(state => state.readme);
   const iframeContent = generatedReadme
+
+  
 
   return (
     <div className="w-full h-full">
@@ -62,14 +64,14 @@ function Generated() {
         </button>
       </div>
       <div className='space-y-4' >
-        <div className="bg-zinc-100 text-zinc-600 w-full h-full py-4">
+        <div className="bg-zinc-100 text-zinc-600 py-4">
           <pre>{generatedReadme}</pre>
 
         </div>
         <div
-          className="bg-zinc-100 text-zinc-600 w-full h-full py-4"
+          className="bg-zinc-100 text-zinc-600 h-screen  py-4"
         >
-          <iframe className='w-full h-96 text-zinc-600' srcDoc={iframeContent}></iframe>
+          <iframe className='w-full h-full text-zinc-600' srcDoc={iframeContent}></iframe>
         </div>
       </div>
     </div>

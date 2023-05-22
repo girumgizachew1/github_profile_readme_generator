@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
       <div className='flex mx-10 mt-10 space-x-4 '>
         <div className='basis-1/2 w-full shadow-sm shadow-zinc-300 rounded-sm' ><Form /></div>
-        <div className='basis-1/2 w-full '><Generated /></div>
+        <div className='basis-1/2 w-full h-full'><Generated /></div>
 
 
       </div>

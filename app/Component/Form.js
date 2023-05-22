@@ -171,17 +171,28 @@ const handleFunfactChange = (event) => {
     {/*this is where i generated the readme*/}
     const generateReadme = () => {
         const readmeContent = `
-        <h1 align="center">${titleone} ${titletwo}</h1>
-        <h3 align="center">${subtitle}</h3>
-        ${currently} <a href="${currentlyProjectLink}">${currentlyProjectName}</a>
-        <br/>
-        -${learnhead} **${learn}**
-        <br/>
-        ${collaborate} <a href="${collaborateProjectLink}">${collaborateProjectName}</a>
-        <br/>
-        ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
-        <p align="left">
-        </p>
+<h1 align="center">${titleone} ${titletwo}</h1>
+<h3 align="center">${subtitle}</h3>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=girumgizachew1&label=Profile%20views&color=0e75b6&style=flat" alt="girumgizachew1" /> </p>
+
+---<br/>
+${currently} <a href="${currentlyProjectLink}">${currentlyProjectName}</a>
+<br/>
+-${learnhead} **${learn}**
+<br/>
+${collaborate} <a href="${collaborateProjectLink}">${collaborateProjectName}</a>
+<br/>
+${help} <a href="${helpProjectLink}">${helpProjectName}</a>
+
+
+<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=girumgizachew1&show_icons=true&locale=en&layout=compact" alt="girumgizachew1" /></p>
+
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=girumgizachew1&show_icons=true&locale=en" alt="girumgizachew1" /></p>
+
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=girumgizachew1&" alt="girumgizachew1" /></p>
+
+<p align="left">
+</p>
 `;
         dispatch(setGeneratedReadme(readmeContent));
         // Logic to do something with the generated README content
