@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function Header() {
   return (
-    <header className="w-full h-40 flex flex-col ">
+    <header className="w-full h-28 flex flex-col ">
       <div className='bg-zinc-700 flex w-full h-14 justify-between fixed ' >
         <div className='flex space-x-4' >
           <div className="h-16 mt-2">

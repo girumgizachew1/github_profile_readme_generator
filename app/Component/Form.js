@@ -10,7 +10,7 @@ import SocialSection from './FormComponent/SocialSection';
 function Form() {
     const dispatch = useDispatch();
 
-{/*tittle */}
+    {/*tittle */ }
     const [titleone, setTitleone] = useState('Hi 👋, I am');
     const [titletwo, setTitletwo] = useState('');
     const handleTitleChange = (event) => {
@@ -20,15 +20,15 @@ function Form() {
         setTitletwo(event.target.value);
     };
 
-{/*subttile */}
+    {/*subttile */ }
     const [subtitle, setSubtitle] = useState('A passionate frontend developer from Ethiopia');
     const handleSubtitleChange = (event) => {
         setSubtitle(event.target.value);
     };
 
 
-{/*work */}
-//currently
+    {/*work */ }
+    //currently
     const [currently, setCurrently] = useState('🔭 I’m currently working on');
     const [currentlyProjectName, setCurrentlyProjectName] = useState('');
     const [currentlyProjectLink, setCurrentlyProjectLink] = useState('');
@@ -44,7 +44,7 @@ function Form() {
         setCurrentlyProjectLink(event.target.value);
     };
 
-//collaborate
+    //collaborate
     const [collaborate, setCollaborate] = useState('👯 I’m looking to collaborate on');
     const [collaborateProjectName, setCollaborateProjectName] = useState('');
     const [collaborateProjectLink, setCollaborateProjectLink] = useState('');
@@ -60,7 +60,7 @@ function Form() {
         setCollaborateProjectLink(event.target.value);
     };
 
-//needhelp
+    //needhelp
     const [help, setHelp] = useState('🤝 I’m looking for help with');
     const [helpProjectName, setHelpProjectName] = useState('');
     const [helpProjectLink, setHelpProjectLink] = useState('');
@@ -77,104 +77,102 @@ function Form() {
     };
 
 
-{/*Profile*/}
-//learn
-const [learnhead, setLearnHead] = useState('🌱 I’m currently learning');
-const [learn, setLearn] = useState('');
-const handleLearnHeadChange = (event) => {
-    setLearnHead(event.target.value);
-};
+    {/*Profile*/ }
+    //learn
+    const [learnhead, setLearnHead] = useState('🌱 I’m currently learning');
+    const [learn, setLearn] = useState('');
+    const handleLearnHeadChange = (event) => {
+        setLearnHead(event.target.value);
+    };
 
-const handleLearnChange = (event) => {
-    setLearn(event.target.value);
-};
+    const handleLearnChange = (event) => {
+        setLearn(event.target.value);
+    };
 
-//ask
-const [askhead, setAskHead] = useState('Ask me about 💬 ');
-const [ask, setAsk] = useState('');
-const handleAskHeadChange = (event) => {
-    setAskHead(event.target.value);
-};
+    //ask
+    const [askhead, setAskHead] = useState('Ask me about 💬 ');
+    const [ask, setAsk] = useState('');
+    const handleAskHeadChange = (event) => {
+        setAskHead(event.target.value);
+    };
 
-const handleAskChange = (event) => {
-    setAsk(event.target.value);
-};
+    const handleAskChange = (event) => {
+        setAsk(event.target.value);
+    };
 
-//email
-const [emailhead, setEmailHead] = useState('How to reach me📫 ');
-const [email, setEmail] = useState('');
-const handleEmailHeadChange = (event) => {
-    setEmailHead(event.target.value);
-};
+    //email
+    const [emailhead, setEmailHead] = useState('How to reach me📫 ');
+    const [email, setEmail] = useState('');
+    const handleEmailHeadChange = (event) => {
+        setEmailHead(event.target.value);
+    };
 
-const handleEmailChange = (event) => {
-    setEmail(event.target.value);
-};
+    const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+    };
 
-//Portfolio
-const [portfoliohead, setPortfolioHead] = useState('👨‍💻 All of my projects are available at');
-const [portfolio, setPortfolio] = useState('');
-const handlePortfolioHeadChange = (event) => {
-    setPortfolioHead(event.target.value);
-};
+    //Portfolio
+    const [portfoliohead, setPortfolioHead] = useState('👨‍💻 All of my projects are available at');
+    const [portfolio, setPortfolio] = useState('');
+    const handlePortfolioHeadChange = (event) => {
+        setPortfolioHead(event.target.value);
+    };
 
-const handlePortfolioChange = (event) => {
-    setPortfolio(event.target.value);
-};
+    const handlePortfolioChange = (event) => {
+        setPortfolio(event.target.value);
+    };
 
-//Blog
-const [bloghead, setBlogHead] = useState('📝 I regularly write articles on');
-const [blog, setBlog] = useState('');
-const handleBlogHeadChange = (event) => {
-    setBlogHead(event.target.value);
-};
+    //Blog
+    const [bloghead, setBlogHead] = useState('📝 I regularly write articles on');
+    const [blog, setBlog] = useState('');
+    const handleBlogHeadChange = (event) => {
+        setBlogHead(event.target.value);
+    };
 
-const handleBlogChange = (event) => {
-    setBlog(event.target.value);
-};
-
-
-//Resume
-const [resumehead, setResumeHead] = useState('Know about my experiences 📄 ');
-const [resume, setResume] = useState('');
-const handleResumeHeadChange = (event) => {
-    setResumeHead(event.target.value);
-};
-
-const handleResumeChange = (event) => {
-    setResume(event.target.value);
-};
+    const handleBlogChange = (event) => {
+        setBlog(event.target.value);
+    };
 
 
-//Fun fact
-const [funfacthead, setFunfactHead] = useState('⚡ Fun fact');
-const [funfact, setFunfact] = useState('');
-const handleFunfactHeadChange = (event) => {
-    setFunfactHead(event.target.value);
-};
+    //Resume
+    const [resumehead, setResumeHead] = useState('Know about my experiences 📄 ');
+    const [resume, setResume] = useState('');
+    const handleResumeHeadChange = (event) => {
+        setResumeHead(event.target.value);
+    };
 
-const handleFunfactChange = (event) => {
-    setFunfact(event.target.value);
-};
-
-
-{/* Social */}
+    const handleResumeChange = (event) => {
+        setResume(event.target.value);
+    };
 
 
-//github
-const [github, setGithub] = useState('');
-const handleGithubChange = (event) => {
-    setGithub(event.target.value);
-};
+    //Fun fact
+    const [funfacthead, setFunfactHead] = useState('⚡ Fun fact');
+    const [funfact, setFunfact] = useState('');
+    const handleFunfactHeadChange = (event) => {
+        setFunfactHead(event.target.value);
+    };
+
+    const handleFunfactChange = (event) => {
+        setFunfact(event.target.value);
+    };
 
 
-//twiter
-const [twiter, setTwiter] = useState('');
-const handleTwiterChange = (event) => {
-    setTwiter(event.target.value);
-};
+    {/* Social */ }
 
 
+    //github
+    const [github, setGithub] = useState('');
+    const handleGithubChange = (event) => {
+        setGithub(event.target.value);
+    };
+
+
+    //twiter
+    const [twitter, setTwitter] = useState('');
+    const handleTwitterChange = (event) => {
+        setTwitter(event.target.value);
+    };
 
 
 
@@ -182,7 +180,9 @@ const handleTwiterChange = (event) => {
 
 
 
-    {/*this is where i generated the readme*/}
+
+
+    {/*this is where i generated the readme*/ }
     const generateReadme = () => {
         const readmeContent = `
 <h1 align="center">${titleone} ${titletwo}</h1>
@@ -205,6 +205,7 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=girumgizachew1&" alt="girumgizachew1" /></p>
 
+<a href="https://twitter.com/${twitter}" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="danikt" height="30" width="40" /></a>
 <p align="left">
 </p>
 `;
@@ -214,67 +215,72 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
 
     return (
         <div className='space-y-6 justify-center p-2 bg-zinc-100 text-zinc-600' >
-            <TitleSection titleone={titleone} titletwo={titletwo} handleTitleChange={handleTitleChange} handleTitleTwoChange={handleTitleTwoChange} />          
+            <TitleSection titleone={titleone} titletwo={titletwo} handleTitleChange={handleTitleChange} handleTitleTwoChange={handleTitleTwoChange} />
             <SubtitleSection subtitle={subtitle} handleSubtitleChange={handleSubtitleChange} />
-            <WorkSection 
-            currently={currently}
-            currentlyProjectLink={collaborateProjectLink}
-            currentlyProjectName={collaborateProjectName}
-            handleCurrentlyChange={handleCurrentlyChange}
-            handleCurrentlyProjectLinkChange={handleCurrentlyProjectLinkChange}
-            handleCurrentlyProjectNameChange={handleCurrentlyProjectNameChange}
-            
-            collaborate={collaborate} 
-            handleCollaborateChange={handleCollaborateChange} 
-            collaborateProjectLink={collaborateProjectLink} 
-            handleCollaborateProjectLinkChange={handleCollaborateProjectLinkChange}
-            collaborateProjectName={collaborateProjectName}
-            handleCollaborateProjectNameChange={handleCollaborateProjectNameChange}
-            
-            help={help}
-            helpProjectLink={helpProjectLink}
-            helpProjectName={helpProjectName}
-            handleHelpChange={handleHelpChange}
-            handleHelpProjectLinkChange={handleHelpProjectLinkChange}
-            handleHelpProjectNameChange={handleHelpProjectNameChange}
-             />
-            
-            <ProfileSection 
-            learnhead={learnhead}
-            learn={learn}
-            ask={ask}
-            askhead={askhead}
-            email={email}
-            emailhead={emailhead}
-            portfolio={portfolio}
-            portfoliohead={portfoliohead}
-            bloghead={bloghead}
-            blog={blog}
-            resume={resume}
-            resumehead={resumehead}
-            funfact={funfact}
-            funfacthead={funfacthead}
-            handleLearnChange={handleLearnChange}
-            handleLearnHeadChange={handleLearnHeadChange}
-            handleAskChange={handleAskChange}
-            handleAskHeadChange={handleAskHeadChange}
-            handleEmailChange={handleEmailChange}
-            handleEmailHeadChange={handleEmailHeadChange}
-            handlePorfolioChange={handlePortfolioChange}
-            handlePorfolioHeadChange={handlePortfolioHeadChange}
-            handleBlogChange={handleBlogChange}
-            handleBlogHeadChange={handleBlogHeadChange}
-            handleResumeChange={handleResumeChange}
-            handleResumeHeadChange={handleResumeHeadChange}
-            handleFanfactChange={handleFunfactChange}
-            handleFanfactHeadChange={handleFunfactHeadChange}
+            <WorkSection
+                currently={currently}
+                currentlyProjectLink={collaborateProjectLink}
+                currentlyProjectName={collaborateProjectName}
+                handleCurrentlyChange={handleCurrentlyChange}
+                handleCurrentlyProjectLinkChange={handleCurrentlyProjectLinkChange}
+                handleCurrentlyProjectNameChange={handleCurrentlyProjectNameChange}
+
+                collaborate={collaborate}
+                handleCollaborateChange={handleCollaborateChange}
+                collaborateProjectLink={collaborateProjectLink}
+                handleCollaborateProjectLinkChange={handleCollaborateProjectLinkChange}
+                collaborateProjectName={collaborateProjectName}
+                handleCollaborateProjectNameChange={handleCollaborateProjectNameChange}
+
+                help={help}
+                helpProjectLink={helpProjectLink}
+                helpProjectName={helpProjectName}
+                handleHelpChange={handleHelpChange}
+                handleHelpProjectLinkChange={handleHelpProjectLinkChange}
+                handleHelpProjectNameChange={handleHelpProjectNameChange}
+            />
+
+            <ProfileSection
+                learnhead={learnhead}
+                learn={learn}
+                ask={ask}
+                askhead={askhead}
+                email={email}
+                emailhead={emailhead}
+                portfolio={portfolio}
+                portfoliohead={portfoliohead}
+                bloghead={bloghead}
+                blog={blog}
+                resume={resume}
+                resumehead={resumehead}
+                funfact={funfact}
+                funfacthead={funfacthead}
+                handleLearnChange={handleLearnChange}
+                handleLearnHeadChange={handleLearnHeadChange}
+                handleAskChange={handleAskChange}
+                handleAskHeadChange={handleAskHeadChange}
+                handleEmailChange={handleEmailChange}
+                handleEmailHeadChange={handleEmailHeadChange}
+                handlePorfolioChange={handlePortfolioChange}
+                handlePorfolioHeadChange={handlePortfolioHeadChange}
+                handleBlogChange={handleBlogChange}
+                handleBlogHeadChange={handleBlogHeadChange}
+                handleResumeChange={handleResumeChange}
+                handleResumeHeadChange={handleResumeHeadChange}
+                handleFanfactChange={handleFunfactChange}
+                handleFanfactHeadChange={handleFunfactHeadChange}
 
 
 
 
 
             />
-            <SocialSection/>
+            <SocialSection
+                github={github}
+                handleGithubChange={handleGithubChange}
+                twitter={twitter}
+                handleTwitterChange={handleTwitterChange}
+            />
             <button className='px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
         </div>
     );
