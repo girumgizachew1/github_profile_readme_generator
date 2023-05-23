@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 export default function Home() {
   return (
     <Provider store={store}>
-    <main className="h-screen w-screen">
+    <main className="h-full w-full">
       <Header />
       <div className='flex mx-10 mt-10 space-x-4 '>
         <div className='basis-1/2 shadow-sm shadow-zinc-300 rounded-sm' ><Form /></div>

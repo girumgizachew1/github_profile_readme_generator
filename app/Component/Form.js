@@ -214,9 +214,10 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
     };
 
     return (
-        <div className='space-y-6 justify-center p-2 bg-zinc-100 text-zinc-600' >
+        <div className='space-y-6 justify-center p-2 bg-zinc-100 text-zinc-600 h-[80vh] overflow-y-scroll' >
             <TitleSection titleone={titleone} titletwo={titletwo} handleTitleChange={handleTitleChange} handleTitleTwoChange={handleTitleTwoChange} />
             <SubtitleSection subtitle={subtitle} handleSubtitleChange={handleSubtitleChange} />
+           
             <WorkSection
                 currently={currently}
                 currentlyProjectLink={currentlyProjectLink}
@@ -239,6 +240,8 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
                 handleHelpProjectLinkChange={handleHelpProjectLinkChange}
                 handleHelpProjectNameChange={handleHelpProjectNameChange}
             />
+             <LanguagesSection/>
+
 
             <ProfileSection
                 learnhead={learnhead}
@@ -272,9 +275,8 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
 
 
 
-
-
             />
+           
             <SocialSection
                 github={github}
                 handleGithubChange={handleGithubChange}

@@ -61,12 +61,12 @@ function Generated() {
         </button>
 
         <button className="px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg flex space-x-2" onClick={() => { setMarkdownView(!MarkdownView) }} >
-          <GrView className="w-5 h-5" /> <h1>Preview</h1>
+          <GrView className="w-5 h-5" /> {MarkdownView ?<h1> Preview </h1>: <h1> Markdown </h1>}
         </button>
       </div>
       <div className="space-y-4">
         {MarkdownView ?
-          <div className="bg-zinc-100 text-zinc-600 py-4">
+          <div className="bg-zinc-100 h-screen text-zinc-600 py-4">
             <pre className="max-w-2xl mx-auto whitespace-pre-wrap">{generatedReadme}</pre>
           </div>
           :
