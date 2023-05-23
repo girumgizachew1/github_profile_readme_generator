@@ -219,8 +219,8 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
             <SubtitleSection subtitle={subtitle} handleSubtitleChange={handleSubtitleChange} />
             <WorkSection
                 currently={currently}
-                currentlyProjectLink={collaborateProjectLink}
-                currentlyProjectName={collaborateProjectName}
+                currentlyProjectLink={currentlyProjectLink}
+                currentlyProjectName={currentlyProjectName}
                 handleCurrentlyChange={handleCurrentlyChange}
                 handleCurrentlyProjectLinkChange={handleCurrentlyProjectLinkChange}
                 handleCurrentlyProjectNameChange={handleCurrentlyProjectNameChange}

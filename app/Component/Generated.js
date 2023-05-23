@@ -60,7 +60,7 @@ function Generated() {
           <FaFileCode className="w-5 h-5" /> <h1>Download Backup</h1>
         </button>
 
-        <button className="px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg flex space-x-2" onClick={() => { setMarkdownView(MarkdownView) }} >
+        <button className="px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg flex space-x-2" onClick={() => { setMarkdownView(!MarkdownView) }} >
           <GrView className="w-5 h-5" /> <h1>Preview</h1>
         </button>
       </div>
