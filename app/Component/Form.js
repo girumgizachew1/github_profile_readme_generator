@@ -264,14 +264,14 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
                 handleAskHeadChange={handleAskHeadChange}
                 handleEmailChange={handleEmailChange}
                 handleEmailHeadChange={handleEmailHeadChange}
-                handlePorfolioChange={handlePortfolioChange}
-                handlePorfolioHeadChange={handlePortfolioHeadChange}
+                handlePortfolioChange={handlePortfolioChange}
+                handlePortfolioHeadChange={handlePortfolioHeadChange}
                 handleBlogChange={handleBlogChange}
                 handleBlogHeadChange={handleBlogHeadChange}
                 handleResumeChange={handleResumeChange}
                 handleResumeHeadChange={handleResumeHeadChange}
-                handleFanfactChange={handleFunfactChange}
-                handleFanfactHeadChange={handleFunfactHeadChange}
+                handleFunfactChange={handleFunfactChange}
+                handleFunfactHeadChange={handleFunfactHeadChange}
 
 
 
