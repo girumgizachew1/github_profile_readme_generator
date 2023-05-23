@@ -44,7 +44,7 @@ function ProfileSection({
 }) {
   return (
     <div className='space-y-3'>
-    <h1 className='text-xl font-semibold'>Profile</h1>
+    <h1 className='text-xl font-semibold'>Detail</h1>
     <div className='space-x-4 text-sm text-zinc-600'>
       <input
         type="text"
