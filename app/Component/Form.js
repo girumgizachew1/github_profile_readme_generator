@@ -7,6 +7,7 @@ import WorkSection from './FormComponent/WorkSection';
 import ProfileSection from './FormComponent/ProfileSection';
 import LanguagesSection from './FormComponent/LanguagesSection';
 import SocialSection from './FormComponent/SocialSection';
+import Checkbox from './FormComponent/Checkbox';
 function Form() {
     const dispatch = useDispatch();
 
@@ -178,6 +179,31 @@ function Form() {
 
 
 
+    const [showVisitorsCount, setShowVisitorsCount] = useState(true);
+    const [showGitHubTrophy, setShowGitHubTrophy] = useState(true);
+    const [showProfileStats, setShowProfileStats] = useState(true);
+    const [showTopSkills, setShowTopSkills] = useState(true);
+    const [showStreakStats, setShowStreakStats] = useState(true);
+
+    const handleVisitorsCountChange = () => {
+        setShowVisitorsCount(!showVisitorsCount);
+    };
+
+    const handleGitHubTrophyChange = () => {
+        setShowGitHubTrophy(!showGitHubTrophy);
+    };
+
+    const handleProfileStatsChange = () => {
+        setShowProfileStats(!showProfileStats);
+    };
+
+    const handleTopSkillsChange = () => {
+        setShowTopSkills(!showTopSkills);
+    };
+
+    const handleStreakStatsChange = () => {
+        setShowStreakStats(!showStreakStats);
+    };
 
 
 
@@ -217,7 +243,7 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
         <div className='space-y-6 justify-center p-2 bg-zinc-100 text-zinc-600 h-[80vh] overflow-y-scroll' >
             <TitleSection titleone={titleone} titletwo={titletwo} handleTitleChange={handleTitleChange} handleTitleTwoChange={handleTitleTwoChange} />
             <SubtitleSection subtitle={subtitle} handleSubtitleChange={handleSubtitleChange} />
-           
+
             <WorkSection
                 currently={currently}
                 currentlyProjectLink={currentlyProjectLink}
@@ -240,7 +266,7 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
                 handleHelpProjectLinkChange={handleHelpProjectLinkChange}
                 handleHelpProjectNameChange={handleHelpProjectNameChange}
             />
-             <LanguagesSection/>
+            <LanguagesSection />
 
 
             <ProfileSection
@@ -276,13 +302,48 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
 
 
             />
-           
+
             <SocialSection
                 github={github}
                 handleGithubChange={handleGithubChange}
                 twitter={twitter}
                 handleTwitterChange={handleTwitterChange}
             />
+
+
+
+            <div>
+                <div className="p-4 space-y-6 ">
+                    <h1 className='text-xl font-semibold'>Adds-On</h1>
+                    <Checkbox
+                        label="Display Visitors Count Badge"
+                        checked={showVisitorsCount}
+                        onChange={handleVisitorsCountChange}
+                    />
+                    <Checkbox
+                        label="Display GitHub Trophy"
+                        checked={showGitHubTrophy}
+                        onChange={handleGitHubTrophyChange}
+                    />
+                    <Checkbox
+                        label="Display GitHub Profile Stats Card"
+                        checked={showProfileStats}
+                        onChange={handleProfileStatsChange}
+                    />
+                    <Checkbox
+                        label="Display Top Skills"
+                        checked={showTopSkills}
+                        onChange={handleTopSkillsChange}
+                    />
+                    <Checkbox
+                        label="Display GitHub Streak Stats"
+                        checked={showStreakStats}
+                        onChange={handleStreakStatsChange}
+                    />
+                </div>
+
+            </div>
+
             <button className='px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
         </div>
     );

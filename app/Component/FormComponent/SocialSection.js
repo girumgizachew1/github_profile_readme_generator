@@ -1,15 +1,19 @@
-import React from 'react'
-SiLeetcode
-import { BsGithub, BsTwitter, BsStackOverflow,
+import React, { useState } from 'react'
+
+import {
+    BsGithub, BsTwitter, BsStackOverflow,
     BsLinkedin,
     BsFacebook,
     BsInstagram,
     BsDribbble,
     BsYoutube,
     BsMedium,
-    BsBehance} from 'react-icons/bs';
+    BsBehance
+} from 'react-icons/bs';
 import { FaCodepen, FaDev, FaFacebook, FaInstagram, FaKaggle } from 'react-icons/fa';
 import { AiFillCodeSandboxCircle, AiOutlineCodepenCircle, AiOutlineCodeSandbox } from 'react-icons/ai';
+import { SiLeetcode } from 'react-icons/si';
+
 
 function SocialSection({
     github,
@@ -32,7 +36,7 @@ function SocialSection({
                     />
                 </div>
                 <div className='flex space-x-3 text-sm text-zinc-600'>
-                <BsTwitter className='w-8 h-8' />
+                    <BsTwitter className='w-8 h-8' />
                     <input
                         type="text"
                         id="title"
@@ -42,7 +46,7 @@ function SocialSection({
                     />
                 </div>
                 <div className='flex space-x-3 text-sm text-zinc-600'>
-                <BsLinkedin className='w-8 h-8' />
+                    <BsLinkedin className='w-8 h-8' />
                     <input
                         type="text"
                         id="title"
@@ -65,7 +69,7 @@ function SocialSection({
                     />
                 </div>
                 <div className='flex space-x-3 text-sm text-zinc-600'>
-                <FaCodepen className='w-8 h-8' />
+                    <FaCodepen className='w-8 h-8' />
                     <input
                         type="text"
                         id="title"
@@ -76,7 +80,7 @@ function SocialSection({
                 </div>
 
                 <div className='flex space-x-3 text-sm text-zinc-600'>
-                <FaFacebook className='w-8 h-8' />
+                    <FaFacebook className='w-8 h-8' />
                     <input
                         type="text"
                         id="title"
@@ -120,7 +124,7 @@ function SocialSection({
                         className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
                     />
                 </div>
-                
+
             </div>
 
 
@@ -156,7 +160,7 @@ function SocialSection({
                         className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
                     />
                 </div>
-                
+
             </div>
 
 
@@ -192,10 +196,8 @@ function SocialSection({
                         className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
                     />
                 </div>
-                
-            </div>
 
-            
+            </div>
 
         </div>
     )
