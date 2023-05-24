@@ -241,7 +241,7 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
     };
 
     return (
-        <div className='space-y-6 justify-center p-2 bg-zinc-100 text-zinc-600 h-[80vh] shadow-sm shadow-zinc-300 rounded-sm overflow-y-scroll' >
+        <div className='space-y-6 bg-zinc-50 px-10 justify-center p-2  text-zinc-600  shadow-sm shadow-zinc-300 rounded-sm ' >
             <TitleSection titleone={titleone} titletwo={titletwo} handleTitleChange={handleTitleChange} handleTitleTwoChange={handleTitleTwoChange} />
             <SubtitleSection subtitle={subtitle} handleSubtitleChange={handleSubtitleChange} />
 

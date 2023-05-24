@@ -18,7 +18,7 @@ function Header() {
 
       </div>
       <div className="flex justify-center mt-20 space-x-4">
-        <button href="https://github.com/your-github-link" target="_blank" rel="noopener noreferrer" className="space-x-2  px-6 py-2 flex justify-right bg-cyan-500 text-white font-bold rounded-lg">
+        <button href="https://github.com/your-github-link" target="_blank" rel="noopener noreferrer" className="space-x-2  px-6 py-2 flex justify-right bg-yellow-500 text-white font-bold rounded-lg">
           <AiOutlineStar className='w-5 h-5 animate-spin'  />
           <h1>Star this repo</h1>
         </button>

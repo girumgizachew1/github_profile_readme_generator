@@ -71,7 +71,7 @@ function Generated() {
           </div>
           :
           <div className="bg-zinc-100 text-zinc-600 h-screen py-4">
-            <iframe className="w-full h-full text-zinc-600" srcDoc={iframeContent} />
+            <iframe className=" px-10 w-full h-full text-zinc-600" srcDoc={iframeContent} />
           </div>
 
         }

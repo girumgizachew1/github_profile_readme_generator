@@ -11,9 +11,9 @@ export default function Home() {
   return (
     <>
       <Provider store={store}>
-        <main className=" h-full w-full space-y-10 ">
+        <main className=" h-full w-full space-y-10 bg-zinc-50 ">
           <Header />
-          <div className='flex mx-10 mt-10 space-x-4 '>
+          <div className='flex mt-10 space-x-4  '>
             <div className='basis-1/2 ' ><Form /></div>
             <div className='basis-1/2  h-full'><Generated /></div>
           </div>
