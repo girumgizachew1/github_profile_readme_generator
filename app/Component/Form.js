@@ -344,9 +344,11 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
                 </div>
 
             </div>
-            <SupportSection/>
-
-            <button className='px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
+            <SupportSection />
+            <div className='flex justify-between w-full' >
+                <div></div>
+                <button className='px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
+            </div>
         </div>
     );
 }
