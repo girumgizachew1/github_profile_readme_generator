@@ -5,18 +5,18 @@ import { BiGitRepoForked } from 'react-icons/bi';
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'About', href: '#', current: false },
+  { name: 'Support', href: '#', current: false },
+
 ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Header() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 w-full ">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -37,7 +37,7 @@ export default function Example() {
                   <img
                     className="block h-8 w-auto lg:hidden"
                     src="/logo2.png"
-                    alt="Girum G"
+                    alt="Girum"
                   />
                   <img
                     className="hidden h-8 w-auto lg:block"
