@@ -14,7 +14,7 @@ export default function Home() {
         <main className=" h-full w-full space-y-10 ">
           <Header />
           <div className='flex mx-10 mt-10 space-x-4 '>
-            <div className='basis-1/2 shadow-sm shadow-zinc-300 rounded-sm' ><Form /></div>
+            <div className='basis-1/2 ' ><Form /></div>
             <div className='basis-1/2  h-full'><Generated /></div>
           </div>
           <Footer/>
