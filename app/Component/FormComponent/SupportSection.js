@@ -1,6 +1,8 @@
 import React from 'react';
 import { SiBuymeacoffee } from 'react-icons/si';
 
+import { BiCoffee } from 'react-icons/bi';
+
 function SupportSection() {
     return (
         <div className='space-y-3'>
@@ -21,7 +23,7 @@ function SupportSection() {
                 </div>
                 <div className='flex space-x-2'  >
                     <div className='bg-red-500 px-1 py-2 flex space-x-2 rounded-lg' >
-                        < SiBuymeacoffee className='w-5 h-5 text-white' />
+                        < BiCoffee className='w-5 h-5 text-white' />
                         <h1 className='text-sm font-semibold text-zinc-100' >buy me a coffee</h1>
                     </div>
                     <input
