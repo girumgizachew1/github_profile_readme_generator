@@ -9,6 +9,9 @@ import LanguagesSection from './FormComponent/LanguagesSection';
 import SocialSection from './FormComponent/SocialSection';
 import Checkbox from './FormComponent/Checkbox';
 import SupportSection from './FormComponent/SupportSection';
+
+
+
 function Form() {
     const dispatch = useDispatch();
 
@@ -163,20 +166,173 @@ function Form() {
     {/* Social */ }
 
 
-    //github
+     {/* Social */ }
+
+
+    // GitHub
     const [github, setGithub] = useState('');
     const handleGithubChange = (event) => {
         setGithub(event.target.value);
     };
 
-
-    //twiter
+    // Twitter
     const [twitter, setTwitter] = useState('');
     const handleTwitterChange = (event) => {
         setTwitter(event.target.value);
     };
 
+    // LinkedIn
+    const [linkedin, setLinkedin] = useState('');
+    const handleLinkedinChange = (event) => {
+        setLinkedin(event.target.value);
+    };
 
+    // Dev.to
+    const [devto, setDevto] = useState('');
+    const handleDevtoChange = (event) => {
+        setDevto(event.target.value);
+    };
+
+    // CodePen
+    const [codepen, setCodepen] = useState('');
+    const handleCodepenChange = (event) => {
+        setCodepen(event.target.value);
+    };
+
+    // Facebook
+    const [facebook, setFacebook] = useState('');
+    const handleFacebookChange = (event) => {
+        setFacebook(event.target.value);
+    };
+
+    // CodeSandbox
+    const [codesandbox, setCodesandbox] = useState('');
+    const handleCodesandboxChange = (event) => {
+        setCodesandbox(event.target.value);
+    };
+
+    // Stack Overflow
+    const [stackoverflow, setStackoverflow] = useState('');
+    const handleStackoverflowChange = (event) => {
+        setStackoverflow(event.target.value);
+    };
+
+    // Instagram
+    const [instagram, setInstagram] = useState('');
+    const handleInstagramChange = (event) => {
+        setInstagram(event.target.value);
+    };
+
+    // Dribbble
+    const [dribbble, setDribbble] = useState('');
+    const handleDribbbleChange = (event) => {
+        setDribbble(event.target.value);
+    };
+
+    // YouTube
+    const [youtube, setYoutube] = useState('');
+    const handleYoutubeChange = (event) => {
+        setYoutube(event.target.value);
+    };
+
+    // Kaggle
+    const [kaggle, setKaggle] = useState('');
+    const handleKaggleChange = (event) => {
+        setKaggle(event.target.value);
+    };
+
+    // LeetCode
+    const [leetcode, setLeetcode] = useState('');
+    const handleLeetcodeChange = (event) => {
+        setLeetcode(event.target.value);
+    };
+
+    // Behance
+    const [behance, setBehance] = useState('');
+    const handleBehanceChange = (event) => {
+        setBehance(event.target.value);
+    };
+
+    // Medium
+    const [medium, setMedium] = useState('');
+    const handleMediumChange = (event) => {
+        setMedium(event.target.value);
+    };
+
+
+
+    const socialMedia = [
+        {
+            name: 'CodePen',
+            icon: '<img src="/icons/social/codepen.svg" alt="CodePen" width="30" height="30">',
+            link: codepen
+        },
+        {
+            name: 'Dev.to',
+            icon: '<img src="/icons/social/devto.svg" alt="Dev.to" width="30" height="30">',
+            link: devto
+        },
+        {
+            name: 'Twitter',
+            icon: '<img src="/icons/social/twitter.svg" alt="Twitter" width="30" height="30">',
+            link: twitter
+        },
+        {
+            name: 'LinkedIn',
+            icon: '<img src="/icons/social/linkedin.svg" alt="LinkedIn" width="30" height="30">',
+            link: linkedin
+        },
+        {
+            name: 'Stack Overflow',
+            icon: '<img src="/icons/social/stackoverflow.svg" alt="Stack Overflow" width="30" height="30">',
+            link: stackoverflow
+        },
+        {
+            name: 'CodeSandbox',
+            icon: '<img src="/icons/social/codesandbox.svg" alt="CodeSandbox" width="30" height="30">',
+            link: codesandbox
+        },
+        {
+            name: 'Kaggle',
+            icon: '<img src="/icons/social/kaggle.svg" alt="Kaggle" width="30" height="30">',
+            link: kaggle
+        },
+        {
+            name: 'Facebook',
+            icon: '<img src="facebook.svg" alt="Facebook" width="30" height="30">',
+            link: facebook
+        },
+        {
+            name: 'Instagram',
+            icon: '<img src="/icons/social/instagram.svg" alt="Instagram" width="30" height="30">',
+            link: instagram
+        },
+        {
+            name: 'Dribbble',
+            icon: '<img src="/icons/social/dribbble.svg" alt="Dribbble" width="30" height="30">',
+            link: dribbble
+        },
+        {
+            name: 'Behance',
+            icon: '<img src="/icons/social/behance.svg" alt="Behance" width="30" height="30">',
+            link: behance
+        },
+        {
+            name: 'Medium',
+            icon: '<img src="/icons/social/medium.svg" alt="Medium" width="30" height="30">',
+            link: medium
+        },
+        {
+            name: 'YouTube',
+            icon: '<img src="/icons/social/youtube.svg" alt="YouTube" width="30" height="30">',
+            link: youtube
+        },
+        {
+            name: 'LeetCode',
+            icon: '<img src="/icons/social/leetcode.svg" alt="LeetCode" width="30" height="30">',
+            link: leetcode
+        }
+    ];
 
 
 
@@ -245,16 +401,32 @@ function Form() {
         // Generate language icons based on the selected languages
         const languageIcons = selectedLanguage.map((language) => {
             return `<img src=${language} alt="${language}" width="40" height="40"/>`;
-          });
-        
-          const languagesAndToolsContent = languageIcons.length > 0 ? `
+        });
+
+        const languagesAndToolsContent = languageIcons.length > 0 ? `
             <h3 align="left">Languages and Tools:</h3>
             <p align="left">
               ${languageIcons.join(' ')}
             </p>
-          `:'';
-        
-    
+          `: '';
+
+        // Generate Socialmedial links
+        // Generate social media links based on the provided data
+        const socialLinks = socialMedia
+            .filter((media) => media.link) // Filter out social media with empty links
+            .map((media) => {
+                return `<a href="${media.link}" target="_blank">${media.icon}</a>`;
+            });
+
+        // Generate social media section if there are any links
+        const socialMediaContent = socialLinks.length > 0 ? `
+            <h3 align="left">Connect with me:</h3>
+            <p align="left">
+                 ${socialLinks.join('')}
+            </p>
+            ` : '';
+
+
 
         const readmeContent = `
 <h1 align="center">${title}</h1>
@@ -268,6 +440,8 @@ ${currently} <a href="${currentlyProjectLink}">${currentlyProjectName}</a>
 ${collaborate} <a href="${collaborateProjectLink}">${collaborateProjectName}</a>
 <br/>
 ${languagesAndToolsContent}
+<br/>
+${socialMediaContent}
 <br/>
 ${supportContent}  
 <br/>
@@ -354,7 +528,34 @@ ${streakStats}
                 handleGithubChange={handleGithubChange}
                 twitter={twitter}
                 handleTwitterChange={handleTwitterChange}
+                linkedin={linkedin}
+                handleLinkedinChange={handleLinkedinChange}
+                devto={devto}
+                handleDevtoChange={handleDevtoChange}
+                codepen={codepen}
+                handleCodepenChange={handleCodepenChange}
+                facebook={facebook}
+                handleFacebookChange={handleFacebookChange}
+                codesandbox={codesandbox}
+                handleCodesandboxChange={handleCodesandboxChange}
+                stackoverflow={stackoverflow}
+                handleStackoverflowChange={handleStackoverflowChange}
+                instagram={instagram}
+                handleInstagramChange={handleInstagramChange}
+                dribbble={dribbble}
+                handleDribbbleChange={handleDribbbleChange}
+                youtube={youtube}
+                handleYoutubeChange={handleYoutubeChange}
+                kaggle={kaggle}
+                handleKaggleChange={handleKaggleChange}
+                leetcode={leetcode}
+                handleLeetcodeChange={handleLeetcodeChange}
+                behance={behance}
+                handleBehanceChange={handleBehanceChange}
+                medium={medium}
+                handleMediumChange={handleMediumChange}
             />
+
 
 
 
