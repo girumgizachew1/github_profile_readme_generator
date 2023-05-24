@@ -263,6 +263,11 @@ function Form() {
 
     const socialMedia = [
         {
+            name: 'github',
+            icon: '<img src="/icons/social/github.svg" alt="github" width="30" height="30">',
+            link: github
+        },
+        {
             name: 'CodePen',
             icon: '<img src="/icons/social/codepen.svg" alt="CodePen" width="30" height="30">',
             link: codepen
@@ -331,7 +336,8 @@ function Form() {
             name: 'LeetCode',
             icon: '<img src="/icons/social/leetcode.svg" alt="LeetCode" width="30" height="30">',
             link: leetcode
-        }
+        },
+
     ];
 
 
@@ -449,7 +455,6 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
 ${topSkills}
 ${githubProfileStatuscard}
 ${streakStats}
-<a href="https://twitter.com/${twitter}" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="danikt" height="30" width="40" /></a>
 <p align="left">
 </p>
         `;
