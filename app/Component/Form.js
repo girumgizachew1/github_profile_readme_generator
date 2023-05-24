@@ -200,7 +200,18 @@ function Form() {
         setShowStreakStats(!showStreakStats);
     };
 
-
+        //buymecoffee
+        const [buymecoffee, setBuyMeCoffee] = useState('');
+        const handleBuyMeCoffeeChange = (event) => {
+            setBuyMeCoffee(event.target.value);
+        };
+    
+    
+        //kofi
+        const [kofi, setKofi] = useState('');
+        const handleKofiChange = (event) => {
+            setKofi(event.target.value);
+        };
 
 
     {/*this is where i generated the readme*/ }
@@ -213,26 +224,38 @@ function Form() {
         const streakStats = showStreakStats && github ? `        <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=${github}&" alt="${github}" /></p>
         ` : '';
 
-
+        const supportLinks = [];
+        if (buymecoffee) {
+          supportLinks.push(`<a href="https://www.buymeacoffee.com/${buymecoffee}"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="${buymecoffee}" /></a>`);
+        }
+        if (kofi) {
+          supportLinks.push(`<a href="https://ko-fi.com/${kofi}"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="${kofi}" /></a>`);
+        }
+        const supportContent = supportLinks.length > 0 ? `
+          <h3 align="left">Support:</h3>
+          <p>${supportLinks.join('  ')}</p><br><br>
+        ` : '';
 
         const readmeContent = `
-          <h1 align="center">${title}</h1>
-          <h3 align="center">${subtitle}</h3>
-          ${visitorsContent}
-          ---<br/>
-          ${currently} <a href="${currentlyProjectLink}">${currentlyProjectName}</a>
-          <br/>
-          -${learnhead} **${learn}**
-          <br/>
-          ${collaborate} <a href="${collaborateProjectLink}">${collaborateProjectName}</a>
-          <br/>
-          ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
-          ${topSkills}
-          ${githubProfileStatuscard}
-          ${streakStats}
-          <a href="https://twitter.com/${twitter}" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="danikt" height="30" width="40" /></a>
-          <p align="left">
-          </p>
+<h1 align="center">${title}</h1>
+<h3 align="center">${subtitle}</h3>
+${visitorsContent}
+---<br/>
+${currently} <a href="${currentlyProjectLink}">${currentlyProjectName}</a>
+<br/>
+-${learnhead} **${learn}**
+<br/>
+${collaborate} <a href="${collaborateProjectLink}">${collaborateProjectName}</a>
+<br/>
+${supportContent}  
+<br/>
+${help} <a href="${helpProjectLink}">${helpProjectName}</a>
+${topSkills}
+${githubProfileStatuscard}
+${streakStats}
+<a href="https://twitter.com/${twitter}" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="danikt" height="30" width="40" /></a>
+<p align="left">
+</p>
         `;
         dispatch(setGeneratedReadme(readmeContent));
         // Logic to do something with the generated README content
@@ -337,7 +360,12 @@ function Form() {
                 </div>
 
             </div>
-            <SupportSection />
+            <SupportSection 
+                buymecoffee={buymecoffee}
+                kofi={kofi}
+                handleBuyMeCoffeeChange={handleBuyMeCoffeeChange}
+                handleKofiChange={handleKofiChange}
+            />
             <div className='flex justify-between w-full' >
                 <div></div>
                 <button className='px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>

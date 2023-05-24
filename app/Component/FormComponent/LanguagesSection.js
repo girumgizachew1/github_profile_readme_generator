@@ -109,14 +109,7 @@ const languageCategories = [
           { name: 'TensorFlow', icon: 'https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg' },
         ]
       },
-  {
-    category: 'Frameworks',
-    languages: [
-      { name: 'React', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg' },
-      { name: 'Angular', icon: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original-wordmark.svg' },
-      // Add more framework languages here
-    ],
-  },
+
   // Add more language categories as needed
 ];
 

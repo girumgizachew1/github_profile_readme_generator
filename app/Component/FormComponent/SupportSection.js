@@ -3,7 +3,12 @@ import { SiBuymeacoffee } from 'react-icons/si';
 
 import { BiCoffee } from 'react-icons/bi';
 
-function SupportSection() {
+function SupportSection({
+    buymecoffee,
+    kofi,
+    handleBuyMeCoffeeChange,
+    handleKofiChange,
+}) {
     return (
         <div className='space-y-3'>
             <h1 className='text-xl font-semibold'>Support Me</h1>
@@ -16,7 +21,8 @@ function SupportSection() {
                     <input
                         type="text"
                         id="title"
-                        value=""
+                        value={buymecoffee}
+                        onChange={handleBuyMeCoffeeChange}
                         className="border border-zinc-300 focus:border-zinc-800 outline-none px-2 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
                     />
 
@@ -29,7 +35,8 @@ function SupportSection() {
                     <input
                         type="text"
                         id="title"
-                        value=""
+                        value={kofi}
+                        onChange={handleKofiChange}
                         className="border border-zinc-300 focus:border-zinc-800 outline-none px-2 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
                     />
 
