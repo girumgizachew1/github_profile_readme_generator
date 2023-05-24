@@ -200,19 +200,26 @@ function Form() {
         setShowStreakStats(!showStreakStats);
     };
 
-        //buymecoffee
-        const [buymecoffee, setBuyMeCoffee] = useState('');
-        const handleBuyMeCoffeeChange = (event) => {
-            setBuyMeCoffee(event.target.value);
-        };
-    
-    
-        //kofi
-        const [kofi, setKofi] = useState('');
-        const handleKofiChange = (event) => {
-            setKofi(event.target.value);
-        };
+    //buymecoffee
+    const [buymecoffee, setBuyMeCoffee] = useState('');
+    const handleBuyMeCoffeeChange = (event) => {
+        setBuyMeCoffee(event.target.value);
+    };
 
+
+    //kofi
+    const [kofi, setKofi] = useState('');
+    const handleKofiChange = (event) => {
+        setKofi(event.target.value);
+    };
+
+    {/*this is where i get the langugage data */ }
+    const [selectedLanguage, setSelectedLanguage] = useState([]);
+
+    // Function to update the selectedLanguage state
+    const updateSelectedLanguage = (languages) => {
+        setSelectedLanguage(languages);
+    };
 
     {/*this is where i generated the readme*/ }
     const generateReadme = () => {
@@ -226,15 +233,28 @@ function Form() {
 
         const supportLinks = [];
         if (buymecoffee) {
-          supportLinks.push(`<a href="https://www.buymeacoffee.com/${buymecoffee}"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="${buymecoffee}" /></a>`);
+            supportLinks.push(`<a href="https://www.buymeacoffee.com/${buymecoffee}"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="${buymecoffee}" /></a>`);
         }
         if (kofi) {
-          supportLinks.push(`<a href="https://ko-fi.com/${kofi}"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="${kofi}" /></a>`);
+            supportLinks.push(`<a href="https://ko-fi.com/${kofi}"> <img align="left" src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="${kofi}" /></a>`);
         }
         const supportContent = supportLinks.length > 0 ? `
           <h3 align="left">Support:</h3>
           <p>${supportLinks.join('  ')}</p><br><br>
         ` : '';
+        // Generate language icons based on the selected languages
+        const languageIcons = selectedLanguage.map((language) => {
+            return `<img src=${language} alt="${language}" width="40" height="40"/>`;
+          });
+        
+          const languagesAndToolsContent = languageIcons.length > 0 ? `
+            <h3 align="left">Languages and Tools:</h3>
+            <p align="left">
+              ${languageIcons.join(' ')}
+            </p>
+          `:'';
+        
+    
 
         const readmeContent = `
 <h1 align="center">${title}</h1>
@@ -246,6 +266,8 @@ ${currently} <a href="${currentlyProjectLink}">${currentlyProjectName}</a>
 -${learnhead} **${learn}**
 <br/>
 ${collaborate} <a href="${collaborateProjectLink}">${collaborateProjectName}</a>
+<br/>
+${languagesAndToolsContent}
 <br/>
 ${supportContent}  
 <br/>
@@ -288,7 +310,9 @@ ${streakStats}
                 handleHelpProjectLinkChange={handleHelpProjectLinkChange}
                 handleHelpProjectNameChange={handleHelpProjectNameChange}
             />
-            <LanguagesSection />
+            <LanguagesSection
+                updateSelectedLanguage={updateSelectedLanguage}
+            />
 
 
             <ProfileSection
@@ -360,7 +384,7 @@ ${streakStats}
                 </div>
 
             </div>
-            <SupportSection 
+            <SupportSection
                 buymecoffee={buymecoffee}
                 kofi={kofi}
                 handleBuyMeCoffeeChange={handleBuyMeCoffeeChange}
