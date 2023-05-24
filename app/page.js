@@ -15,7 +15,7 @@ export default function Home() {
           <Header  />
           <div className='flex mt-10 space-x-4  flex-col md:flex-row '>
             <div className='basis-1/2 ' >
-              <h1 className='w-full text-center text-zinc-600 text-2xl font-semibold' >Add you Information here</h1>
+              <h1 className='w-full text-center text-zinc-500 text-2xl font-semibold' >Add you Information here</h1>
               <Form />
               </div>
             <div className='basis-1/2  h-full'><Generated /></div>
