@@ -14,7 +14,10 @@ export default function Home() {
         <main className=" h-full w-full space-y-10 bg-zinc-50 ">
           <Header  />
           <div className='flex mt-10 space-x-4  flex-col md:flex-row '>
-            <div className='basis-1/2 ' ><Form /></div>
+            <div className='basis-1/2 ' >
+              <h1 className='w-full text-center text-zinc-600 text-2xl font-semibold' >Add you Information here</h1>
+              <Form />
+              </div>
             <div className='basis-1/2  h-full'><Generated /></div>
           </div>
           <Footer/>
