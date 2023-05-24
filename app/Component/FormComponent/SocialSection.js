@@ -1,8 +1,13 @@
 import React from 'react'
+SiLeetcode
 import { BsGithub, BsTwitter, BsStackOverflow,
     BsLinkedin,
     BsFacebook,
-    BsInstagram} from 'react-icons/bs';
+    BsInstagram,
+    BsDribbble,
+    BsYoutube,
+    BsMedium,
+    BsBehance} from 'react-icons/bs';
 import { FaCodepen, FaDev, FaFacebook, FaInstagram, FaKaggle } from 'react-icons/fa';
 import { AiFillCodeSandboxCircle, AiOutlineCodepenCircle, AiOutlineCodeSandbox } from 'react-icons/ai';
 
@@ -122,7 +127,7 @@ function SocialSection({
 
             <div className='space-x-3 flex'>
                 <div className='flex space-x-2 text-sm text-zinc-600'>
-                    <AiFillCodeSandboxCircle className='w-8 h-8' />
+                    <BsDribbble className='w-8 h-8' />
                     <input
                         type="text"
                         id="title"
@@ -132,7 +137,7 @@ function SocialSection({
                     />
                 </div>
                 <div className='flex space-x-2 text-sm text-zinc-600'>
-                    <BsStackOverflow className='w-8 h-8' />
+                    <BsYoutube className='w-8 h-8' />
                     <input
                         type="text"
                         id="title"
@@ -142,7 +147,7 @@ function SocialSection({
                     />
                 </div>
                 <div className='flex space-x-2 text-sm text-zinc-600'>
-                    <FaInstagram className='w-8 h-8' />
+                    <FaKaggle className='w-8 h-8' />
                     <input
                         type="text"
                         id="title"
@@ -158,7 +163,7 @@ function SocialSection({
 
             <div className='space-x-3 flex'>
                 <div className='flex space-x-2 text-sm text-zinc-600'>
-                    <AiFillCodeSandboxCircle className='w-8 h-8' />
+                    <BsMedium className='w-8 h-8' />
                     <input
                         type="text"
                         id="title"
@@ -168,7 +173,7 @@ function SocialSection({
                     />
                 </div>
                 <div className='flex space-x-2 text-sm text-zinc-600'>
-                    <BsStackOverflow className='w-8 h-8' />
+                    <BsBehance className='w-8 h-8' />
                     <input
                         type="text"
                         id="title"
@@ -178,7 +183,7 @@ function SocialSection({
                     />
                 </div>
                 <div className='flex space-x-2 text-sm text-zinc-600'>
-                    <FaInstagram className='w-8 h-8' />
+                    <SiLeetcode className='w-8 h-8' />
                     <input
                         type="text"
                         id="title"
