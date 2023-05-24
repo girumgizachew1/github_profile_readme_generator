@@ -180,18 +180,12 @@ function Form() {
 
 
 
-    const [showVisitorsCount, setShowVisitorsCount] = useState(true);
-    const [showGitHubTrophy, setShowGitHubTrophy] = useState(true);
-    const [showProfileStats, setShowProfileStats] = useState(true);
-    const [showTopSkills, setShowTopSkills] = useState(true);
-    const [showStreakStats, setShowStreakStats] = useState(true);
-
+    const [showVisitorsCount, setShowVisitorsCount] = useState(false);
+    const [showProfileStats, setShowProfileStats] = useState(false);
+    const [showTopSkills, setShowTopSkills] = useState(false);
+    const [showStreakStats, setShowStreakStats] = useState(false);
     const handleVisitorsCountChange = () => {
         setShowVisitorsCount(!showVisitorsCount);
-    };
-
-    const handleGitHubTrophyChange = () => {
-        setShowGitHubTrophy(!showGitHubTrophy);
     };
 
     const handleProfileStatsChange = () => {
@@ -211,31 +205,35 @@ function Form() {
 
     {/*this is where i generated the readme*/ }
     const generateReadme = () => {
+        const title = `${titleone} ${titletwo}`;
+        const visitorsContent = showVisitorsCount && github ? `<p align="left"> <img src="https://komarev.com/ghpvc/?username=${github}&label=Profile%20views&color=0e75b6&style=flat" alt="girumgizachew1" /> </p>` : '';
+        const githubProfileStatuscard = showProfileStats && github ? `<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=${github}&show_icons=true&locale=en" alt="${github}" /></p>` : '';
+        const topSkills = showTopSkills && github ? `        <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=${github}&show_icons=true&locale=en&layout=compact" alt="${github}" /></p>
+        ` : '';
+        const streakStats = showStreakStats && github ? `        <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=${github}&" alt="${github}" /></p>
+        ` : '';
+
+
+
         const readmeContent = `
-<h1 align="center">${titleone} ${titletwo}</h1>
-<h3 align="center">${subtitle}</h3>
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=girumgizachew1&label=Profile%20views&color=0e75b6&style=flat" alt="girumgizachew1" /> </p>
-
----<br/>
-${currently} <a href="${currentlyProjectLink}">${currentlyProjectName}</a>
-<br/>
--${learnhead} **${learn}**
-<br/>
-${collaborate} <a href="${collaborateProjectLink}">${collaborateProjectName}</a>
-<br/>
-${help} <a href="${helpProjectLink}">${helpProjectName}</a>
-
-
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=girumgizachew1&show_icons=true&locale=en&layout=compact" alt="girumgizachew1" /></p>
-
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=girumgizachew1&show_icons=true&locale=en" alt="girumgizachew1" /></p>
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=girumgizachew1&" alt="girumgizachew1" /></p>
-
-<a href="https://twitter.com/${twitter}" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="danikt" height="30" width="40" /></a>
-<p align="left">
-</p>
-`;
+          <h1 align="center">${title}</h1>
+          <h3 align="center">${subtitle}</h3>
+          ${visitorsContent}
+          ---<br/>
+          ${currently} <a href="${currentlyProjectLink}">${currentlyProjectName}</a>
+          <br/>
+          -${learnhead} **${learn}**
+          <br/>
+          ${collaborate} <a href="${collaborateProjectLink}">${collaborateProjectName}</a>
+          <br/>
+          ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
+          ${topSkills}
+          ${githubProfileStatuscard}
+          ${streakStats}
+          <a href="https://twitter.com/${twitter}" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="danikt" height="30" width="40" /></a>
+          <p align="left">
+          </p>
+        `;
         dispatch(setGeneratedReadme(readmeContent));
         // Logic to do something with the generated README content
     };
@@ -320,11 +318,6 @@ ${help} <a href="${helpProjectLink}">${helpProjectName}</a>
                         label="Display Visitors Count Badge"
                         checked={showVisitorsCount}
                         onChange={handleVisitorsCountChange}
-                    />
-                    <Checkbox
-                        label="Display GitHub Trophy"
-                        checked={showGitHubTrophy}
-                        onChange={handleGitHubTrophyChange}
                     />
                     <Checkbox
                         label="Display GitHub Profile Stats Card"
