@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/inter": "^5.0.0",
+    "@headlessui/react": "^1.7.14",
     "@next/font": "^13.4.3",
     "@reduxjs/toolkit": "^1.9.5",
     "@vercel/analytics": "^1.0.1",

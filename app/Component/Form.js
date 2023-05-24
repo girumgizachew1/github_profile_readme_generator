@@ -598,7 +598,7 @@ ${streakStats}
             />
             <div className='flex justify-between w-full' >
                 <div></div>
-                <button className='px-6 py-2 flex justify-right bg-zinc-600 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
+                <button className='px-6 py-2 flex justify-right bg-gray-800 text-zinc-100 rounded-lg' onClick={generateReadme}>Generate Read me</button>
             </div>
         </div>
     );
