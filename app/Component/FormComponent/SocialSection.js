@@ -60,7 +60,7 @@ function SocialSection({
             id="github"
             value={github}
             onChange={handleGithubChange}
-            placeholder="GitHub URL"
+            placeholder="GitHub Username"
             className="border border-zinc-300 focus:border-zinc-800 outline-none px-4 py-2 rounded-lg focus:ring-2 focus:ring-zinc-300 focus:outline-none"
           />
         </div>

@@ -284,12 +284,12 @@ function Form() {
         },
         {
             name: 'LinkedIn',
-            icon: '<img src="/icons/social/linkedin.svg" alt="LinkedIn" width="30" height="30">',
+            icon: '<img src="/icons/social/linked-in-alt.svg" alt="LinkedIn" width="30" height="30">',
             link: linkedin
         },
         {
             name: 'Stack Overflow',
-            icon: '<img src="/icons/social/stackoverflow.svg" alt="Stack Overflow" width="30" height="30">',
+            icon: '<img src="/icons/social/stack-overflow.svg" alt="Stack Overflow" width="30" height="30">',
             link: stackoverflow
         },
         {
@@ -304,7 +304,7 @@ function Form() {
         },
         {
             name: 'Facebook',
-            icon: '<img src="facebook.svg" alt="Facebook" width="30" height="30">',
+            icon: '<img src="/icons/social/facebook-alt.svg" alt="Facebook" width="30" height="30">',
             link: facebook
         },
         {
@@ -334,8 +334,8 @@ function Form() {
         },
         {
             name: 'LeetCode',
-            icon: '<img src="/icons/social/leetcode.svg" alt="LeetCode" width="30" height="30">',
-            link: leetcode
+            icon: '<img src="/icons/social/leet-code.svg" alt="LeetCode" width="30" height="30">',
+            link: `${leetcode}`
         },
 
     ];
